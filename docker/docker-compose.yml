@@ -1,0 +1,16 @@
+# Пропишем версию
+version: '3.3'
+
+# Перечислим сервисы
+services:
+
+  php:
+    # Билдим с помощью dockerfile указав директорию где он лежит
+    build: ./php
+
+    container_name: event-listener-bundle
+
+    volumes:
+      - ./../:/var/www/
+      - ./../var/logs/:/var/logs/
+

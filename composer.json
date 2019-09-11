@@ -1,0 +1,45 @@
+{
+  "name": "keepper/event-listener-bundle",
+  "description": "The symfony bundle with event listener functionality",
+  "license": "free",
+  "authors": [
+    {
+      "name": "Andrew Kosov",
+      "email": "andrew.kosov@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Keepper\\EventListenerBundle\\": "src\\"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Keepper\\EventListenerBundle\\Tests\\": "tests\\",
+      "Keepper\\EventListener\\Tests\\": "vendor\\keepper\\event-listener\\tests\\"
+    }
+  },
+  "require": {
+    "php": "^7.2",
+    "psr/log": "^1.0",
+    "keepper/event-listener": "^1.0",
+    "symfony/dependency-injection": "^3.4.30|^4.3.3",
+    "symfony/framework-bundle": "^3.4.30|^4.3.3",
+    "symfony/yaml": "^4.3",
+    "symfony/proxy-manager-bridge": "^4.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2",
+    "monolog/monolog": "^1.24"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit --columns max --color=always",
+    "cover": "./vendor/bin/phpunit --columns max --color=always --coverage-html ./coverage"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/keepper/event-listener.git"
+    }
+  ]
+}

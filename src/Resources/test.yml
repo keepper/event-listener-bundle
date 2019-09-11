@@ -1,0 +1,11 @@
+services:
+
+  TestService:
+    class: stdClass
+    tags:
+      - name: listener.interface
+        interface: 'Keepper\EventListener\Tests\Fixtures\SomeListenerInterface'
+
+  Keepper\EventListenerBundle\Tests\Fixtures\SomeListener:
+    tags:
+      - 'event.listener'

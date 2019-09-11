@@ -1,0 +1,26 @@
+<phpunit colors                     = "true"
+         verbose                    = "true"
+         bootstrap                  = "vendor/autoload.php"
+>
+    <testsuites>
+        <testsuite name="all">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist >
+            <directory suffix=".php">./</directory>
+            <exclude>
+                <directory suffix="Interface.php">./</directory>
+                <directory suffix="Test.php">./</directory>
+                <directory>./coverage/</directory>
+                <directory>./vendor/</directory>
+                <directory>./tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <php>
+        <ini name="error_reporting" value="-1" />
+    </php>
+
+</phpunit>
