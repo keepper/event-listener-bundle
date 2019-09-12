@@ -46,7 +46,9 @@ class EmailConfirmationService {
 ```php
 namespace Example\EmailConfirmationBundle\Events;
 
-interface EmailConfirmedListenerInterface {
+use Keepper\EventListener\Contract\ListenerInterface;
+
+interface EmailConfirmedListenerInterface extends ListenerInterface {
     
     public function onEmailConfirmed(string $email);
     

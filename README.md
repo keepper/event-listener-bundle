@@ -13,7 +13,9 @@ Symfony bundle добавляющий  поддержку [event-listener](https
 ```php
 namespace MyProject\MyPackage\Events;
 
-interface MyEventListener {
+use Keepper\EventListener\Contract\ListenerInterface;
+
+interface MyEventListener extends ListenerInterface {
     public function onMyEventFired(int $someParamOne, string SomeParamTwo = null);
 }
 ```
